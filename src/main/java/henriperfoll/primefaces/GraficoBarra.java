@@ -57,8 +57,8 @@ public class GraficoBarra implements Serializable{
 		Axis xAxis = this.graficoBarras.getAxis(AxisType.X);
 		Axis yAxis = this.graficoBarras.getAxis(AxisType.Y);
 		
-		xAxis.setLabel("Teste");
-		yAxis.setLabel("Random");
+		xAxis.setLabel("Anos");
+		yAxis.setLabel("Quantidade de compras");
 		yAxis.setMax(200);
 		yAxis.setMin(0);
 	}
