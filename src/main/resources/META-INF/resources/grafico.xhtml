@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>PrimeFaces Grafico - Trabalho 3</title>
+</h:head>
+
+<h:body>
+	<h2>Gráficos</h2>
+	<h:form>
+		<p:tabView>
+			<p:tab title="Gráfico de Barras">
+				<p:chart type="bar" model="#{graficoBarra.graficoBarras}"></p:chart>
+			</p:tab>
+			<p:tab title="Gráfico de Linhas">
+				<h:outputText value="Teste de abas"/>
+			</p:tab>
+		</p:tabView>
+	</h:form>
+
+
+
+</h:body>
+</html>
