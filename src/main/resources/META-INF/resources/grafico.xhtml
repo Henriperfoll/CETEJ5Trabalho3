@@ -6,6 +6,12 @@
 
 <h:head>
 	<title>PrimeFaces Grafico - Trabalho 3</title>
+	<style type="text/css">
+.ui-panel {
+	margin: 15px;
+	width: 90%;
+}
+</style>
 </h:head>
 
 <h:body>
@@ -13,10 +19,20 @@
 	<h:form>
 		<p:tabView>
 			<p:tab title="Gráfico de Barras">
-				<p:chart type="bar" model="#{graficoBarra.graficoBarras}"></p:chart>
+				<p:panel id="rpnl" header="Grafico DragDrop Revert">
+					<p:chart type="bar" model="#{graficoBarra.graficoBarras}"></p:chart>
+				</p:panel>
+				<p:draggable for="rpnl" revert="true" />
 			</p:tab>
 			<p:tab title="Gráfico de Linhas">
-				<p:chart type="line" model="#{graficoLinha.graficoLinhas}"></p:chart>
+				
+				<p:outputPanel id="restrictPanel" layout="block"
+					style="width:100%;height:600px;border:1px solid #666666;margin-bottom:20px">
+					<p:panel id="conpnl" header="Grafico DragDrop Restrito">
+						<p:chart type="line" model="#{graficoLinha.graficoLinhas}"></p:chart>
+					</p:panel>
+				</p:outputPanel>
+				<p:draggable for="conpnl" containment="parent" />
 			</p:tab>
 		</p:tabView>
 	</h:form>
